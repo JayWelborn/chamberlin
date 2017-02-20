@@ -23,7 +23,7 @@ from chamberlin.admin import chamberlin_admin
 
 urlpatterns = [
     url(r'^admin/', chamberlin_admin.urls),
-    url(r'^$', include('home.urls')),
+    url(r'^', include('home.urls')),
 ]
 
 if settings.DEBUG:

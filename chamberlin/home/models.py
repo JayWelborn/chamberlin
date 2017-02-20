@@ -30,7 +30,7 @@ class About(models.Model):
     pub_date = models.DateField(default=timezone.now)
 
     def __str__(self):
-        return self.title
+        return self.header
 
 
 class Contact(models.Model):

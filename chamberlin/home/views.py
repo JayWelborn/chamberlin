@@ -25,16 +25,6 @@ class AboutView(ListView):
     context_object_name = 'about'
     model = About
 
-    def get_context_data(self, **kwargs):
-        """
-        Populate list with random fun facts about me
-        """
-        all_facts = FunFact.objects.distinct()
-
-        context = super(AboutView, self).get_context_data(**kwargs)
-        context['fun_fact_list'] = random.sample(list(all_facts), 3)
-        return context
-
     def get_queryset(self):
         return About.objects.latest('pub_date')
 
