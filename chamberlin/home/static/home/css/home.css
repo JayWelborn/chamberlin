@@ -1,0 +1,80 @@
+body {
+    margin: 0px;
+}
+
+.navbar-brand {
+    margin-top: -11px;
+}
+
+nav a {
+    font-family: 'Roboto';
+}
+
+.jumbotron {
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+    background-image: url('/../static/images/landing-page.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rock Salt', sans-serif;
+    margin-bottom: -20px;
+}
+
+.jumbotron-text {
+    margin-top: 15vh;
+    margin-left: 10vw;
+    color: #fdfdfd;
+
+}
+
+.jumbotron h1 {
+    font-size: 400%;
+    text-shadow: 8px 8px 14px #000;
+}
+
+.jumbotron p {
+    font-size: 200%;
+    text-shadow: 8px 8px 14px #000;
+}
+
+.jumbotron a.action {
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: #000;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 75%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 10px;
+    background-color: rgba(34, 34, 34, .2);
+    border-color: #080808;
+}
+
+footer .footer-text{
+    opacity: 1;
+    color: white;
+}
+
+footer .footer-text a{
+    color: #9d9d9d;
+}
+
+footer .footer-text a:hover {
+    color: #fff;
+    text-decoration: none;
+}
