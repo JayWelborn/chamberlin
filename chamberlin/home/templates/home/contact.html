@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/contact.css' %}">
+{% endblock %}
 {% block content %}
-<br>
-<br>
-<br>
-<h1>Contact</h1>
+<div class="contact">
+    <span class="page-header"><h1>{{ contact.title }}</h1></span>
+</div>
 {% endblock %}

@@ -25,8 +25,11 @@ class About(models.Model):
         verbose_name_plural = 'About'
 
     header = models.CharField(max_length=30)
+    image_tag = models.CharField(max_length=30, default="Mike")
     name = models.CharField(max_length=30)
     bio = models.TextField()
+    bio_paragraph_2 = models.TextField(blank=True)
+    bio_paragraph_3 = models.TextField(blank=True)
     pub_date = models.DateField(default=timezone.now)
 
     def __str__(self):
