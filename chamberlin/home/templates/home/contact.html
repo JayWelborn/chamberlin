@@ -3,8 +3,45 @@
 {% block header %}
 <link rel="stylesheet" type="text/css" href="{% static 'home/css/contact.css' %}">
 {% endblock %}
-{% block content %}
+{{% block content %}
 <div class="contact">
-    <span class="page-header"><h1>{{ contact.title }}</h1></span>
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <a class="polaroid" title="{{ contact_info.title }}">
+                <img class="portrait" src="{% static 'images/contact.jpg' %}" alt="{{ contact_info.title }}"/>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <form action="" method="post" class="contact-form"
+            style="background-image: url({% static 'home/eggshell.jpg' %})">
+                {% csrf_token %}
+                <ul class="contact">
+                    {{ form.as_ul }}
+                    <li><input type="submit" value="Email Me!"></li>
+                </ul>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}

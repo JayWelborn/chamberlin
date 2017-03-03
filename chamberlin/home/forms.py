@@ -23,7 +23,7 @@ class ContactForm(forms.Form):
 
         # instantiates EmailMessage class with data from form
         contact_email = EmailMessage(subject=self.cleaned_data['subject'],
-                                     to=['jesse.welborn@gmail.com'],
+                                     to=['mike.chamberlin@gmail.com'],
                                      body='Sender Name: {} \nSender Email: {}\n\n {}'.format(
                                          self.cleaned_data['name'],
                                          self.cleaned_data['email'],

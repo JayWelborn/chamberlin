@@ -1,5 +1,6 @@
 body {
-    margin: 0px;
+    position: relative;
+    min-height: 100vh;
 }
 
 .navbar-brand {
@@ -7,23 +8,22 @@ body {
 }
 
 nav a {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
 }
 
 .jumbotron {
-    margin-top: 50px;
-    height: calc(100vh - 50px);
+    height: 100vh;
     background-image: url('/../static/images/landing-page.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     font-family: 'Rock Salt', sans-serif;
-    margin-bottom: -20px;
+    margin-bottom: -50px;
 }
 
 .jumbotron-text {
-    margin-top: 15vh;
+    margin-top: 20vh;
     margin-left: 10vw;
     color: #fdfdfd;
 }
@@ -31,16 +31,20 @@ nav a {
 .jumbotron h1 {
     font-size: 400%;
     text-shadow: 8px 8px 14px #000;
+    padding-bottom: 10px;
 }
 
 .jumbotron p {
     font-size: 200%;
     text-shadow: 8px 8px 14px #000;
+    padding-bottom: 10px;
 }
 
 .jumbotron a.action {
     text-decoration: none;
     font-family: 'Roboto';
+    letter-spacing: 2px;
+    font-weight: 600;
     color: #000;
     background: #fff;
     padding: 10px 20px;

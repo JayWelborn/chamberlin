@@ -41,7 +41,7 @@ class ContactView(SuccessMessageMixin, FormView):
         :return: latest contact information from db
         """
         context = super(ContactView, self).get_context_data(**kwargs)
-        context['contact'] = Contact.objects.latest('pub_date')
+        context['contact_info'] = Contact.objects.latest('pub_date')
         return context
 
     def form_valid(self, form):
