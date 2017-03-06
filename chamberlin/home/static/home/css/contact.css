@@ -99,4 +99,16 @@ a.polaroid:after {
     padding: 4px 8px 6px 10px;
     background-color: #333;
     border: 0 none;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.contact-form input[type=submit]:hover {
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    background-color: #191919;
 }
