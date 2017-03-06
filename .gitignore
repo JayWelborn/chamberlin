@@ -28,7 +28,7 @@ mike_env/
 .idea
 
 # local DB
-myblog.sqlite3
+*.sqlite3
 
 # blog entry test
 new-entry.html
