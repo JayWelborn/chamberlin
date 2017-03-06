@@ -1,11 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block header %}
-<link href="//fonts.googleapis.com/css?family=" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% static 'home/css/about.css' %}">
 {% endblock %}
 {% block content %}
-<div class="page-header center"><h1>{{ about.title }}</h1></div>
 <div class="about">
     <a class="polaroid" title="{{ about.image_tag }}">
         <img class="portrait" src="{% static 'images/about.jpg' %}" alt="{{ about.image_tag }}"/>

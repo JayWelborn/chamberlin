@@ -4,7 +4,7 @@
     <div class="jumbotron-text">
         <h1>{{ home.headline }}</h1>
         <p>{{ home.sub_headline }}</p>
-        <a class="action" href="contact">{{ home.call_to_action }}</a>
+        <a class="action" href="{% url 'listen:index' %}">{{ home.call_to_action }}</a>
     </div>
 </div>
 {% endblock %}

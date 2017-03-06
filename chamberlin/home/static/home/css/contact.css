@@ -1,6 +1,5 @@
 body {
     background-image: url('/../static/images/dark_wood.png');
-    margin-top: -5px;
 }
 
 .alert {
@@ -8,7 +7,7 @@ body {
 }
 
 .contact {
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 img.portrait {
@@ -38,17 +37,19 @@ img.portrait {
 
 a.polaroid:after {
     color: #333;
-    font-size: 20px;
-    font-family: 'Rock Salt', cursive;
+    font-size: 250%;
+    font-family: 'Special Elite', cursive;
     content: attr(title);
     position: relative;
-    top:15px;
+    top: 25px;
 }
 
 .contact-form {
     overflow: hidden;
     margin-bottom: 20px;
-    transform: rotate(-1deg);
+    transform: rotate(-.2deg);
+    -webkit-transform: rotate(-.2deg);
+    -moz-transform: rotate(-.2deg);
     -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 1);

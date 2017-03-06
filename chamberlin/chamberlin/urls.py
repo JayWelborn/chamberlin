@@ -23,6 +23,7 @@ from chamberlin.admin import chamberlin_admin
 
 urlpatterns = [
     url(r'^admin/', chamberlin_admin.urls),
+    url(r'^listen/', include('listen.urls')),
     url(r'^', include('home.urls')),
 ]
 

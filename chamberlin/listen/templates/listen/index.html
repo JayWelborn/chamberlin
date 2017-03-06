@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'listen/list_view.css' %}">
+{% endblock %}
+{% block title %}Listen{% endblock %}
+{% block content %}
+<div id="audio_header"
+     style="background-image: url({% static 'home/eggshell.jpg' %})">
+    <h1>{{ audio.header }}</h1>
+</div>
+{% if sample_list %}
+<div id="sample-list">
+    {% for sample in sample_list %}
+    <div class="sample"
+         style="background-image: url({% static 'home/eggshell.jpg' %})">
+        <img class="sample-image" src="{{ sample.sample_image.url }}" alt="{{ sample.title }}"/>
+        <p class="title">{{ sample.title }}</p>
+        <p class="pub_date">{{ sample.pub_date }}</p>
+        <audio controls>
+            <source src="{{ sample.audio_track.url }}" type="audio/mp3">
+            <source src="{{ sample.audio_track.url }}" type="audio/mpeg">
+            <source src="{{ sample.audio_track.url }}" type="audio/mpeg3">
+            <source src="{{ sample.audio_track.url }}" type="audio/x-mpeg-3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No Samples</p>
+{% endif %}
+{% endblock %}

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
+    'listen.apps.ListenConfig'
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = 'jesse.welborn@gmail.com'
 EMAIL_HOST_USER = 'jesse.welborn@gmail.com'
+
+# Change max upload size to accommodate MP3s
+MAX_UPLOAD_MEMORY_SIZE = 5242880
