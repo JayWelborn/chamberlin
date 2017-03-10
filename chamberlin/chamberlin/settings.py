@@ -29,8 +29,7 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
+    'chamberlinsax.pythonanywhere.com',
 ]
 
 
@@ -141,4 +140,4 @@ DEFAULT_FROM_EMAIL = 'jesse.welborn@gmail.com'
 EMAIL_HOST_USER = 'jesse.welborn@gmail.com'
 
 # Change max upload size to accommodate MP3s
-MAX_UPLOAD_MEMORY_SIZE = 5242880
+MAX_UPLOAD_MEMORY_SIZE = 10485760
