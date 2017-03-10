@@ -14,12 +14,11 @@ class AudioListView(ListView):
         return data from most recent update to Audio Home object
         """
         context = super(AudioListView, self).get_context_data(**kwargs)
-        latest_audio_home_update = AudioHome.objects.latest('pub_date')
-        if latest_audio_home_update:
+        if AudioHome.objects:
             context['audio'] = AudioHome.objects.latest('pub_date')
             return context
         else:
-            pass
+            return []
 
     def get_queryset(self):
         """

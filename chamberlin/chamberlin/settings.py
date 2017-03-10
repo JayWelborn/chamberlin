@@ -29,6 +29,7 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
     'chamberlinsax.pythonanywhere.com',
 ]
 
