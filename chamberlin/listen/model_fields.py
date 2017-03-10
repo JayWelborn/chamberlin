@@ -15,7 +15,7 @@ class AudioFileField(FileField):
 
     # initiates with properties defining content type and max file size
     def __init__(self, *args, **kwargs):
-        self.max_upload_size = kwargs.pop('max_upload_size', 2621440)
+        self.max_upload_size = kwargs.pop('max_upload_size', 10485760)
         super(AudioFileField, self).__init__(*args, **kwargs)
 
     def clean(self, *args, **kwargs):

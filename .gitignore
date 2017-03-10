@@ -24,6 +24,9 @@ venv/
 ENV/
 mike_env/
 
+# local settings
+settings.py
+
 # IDE stuff
 .idea
 

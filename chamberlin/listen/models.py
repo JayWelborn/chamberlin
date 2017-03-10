@@ -19,7 +19,7 @@ class AudioHome(models.Model):
 class AudioSample(models.Model):
 
     title = models.CharField(max_length=40)
-    audio_track = AudioFileField(upload_to='media/audio/%Y/%m/%d', max_upload_size=2621440)
+    audio_track = AudioFileField(upload_to='media/audio/%Y/%m/%d', max_upload_size=10485760)
     sample_image = models.ImageField(upload_to='media/images/%Y/%m/%d')
     pub_date = models.DateField(default=datetime.now)
     home = models.ForeignKey(AudioHome, on_delete=models.CASCADE)
