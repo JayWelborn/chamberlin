@@ -39,3 +39,6 @@ new-entry.css
 
 # local media files
 /chamberlin/chamberlin/media/
+
+# local static files
+/chamberlin/chamberlin/static/
