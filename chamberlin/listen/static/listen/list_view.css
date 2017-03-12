@@ -72,10 +72,11 @@ body {
 }
 
 .sample .sample-image {
-    height: 150px;
-    width: 150px;
-    margin: 10px;
+    height: 160px;
+    width: 160px;
+    margin-right: 10px;
     float: left;
+    border-radius: 3px 0px 0px 3px;
 }
 
 .sample .title, .sample .pub_date {
@@ -83,12 +84,10 @@ body {
 }
 
 .sample .title {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 30px;
     font-weight: bold;
-    font-size: 120%;
-    text-align: left
+    font-size: 135%;
+    text-align: center;
     letter-spacing: 1px;
     text-wrap: no-wrap;
 }
@@ -96,6 +95,7 @@ body {
 .sample .pub_date {
     margin-left: 20px;
     margin-right: 20px;
+    text-align: center;
     font-size: 90%;
     color: #666;
     font-style: italic;

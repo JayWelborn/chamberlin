@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
-    'listen.apps.ListenConfig'
+    'listen.apps.ListenConfig',
+    'blog.apps.BlogConfig',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +144,6 @@ EMAIL_HOST_USER = 'jesse.welborn@gmail.com'
 
 # Change max upload size to accommodate MP3s
 MAX_UPLOAD_MEMORY_SIZE = 10485760
+
+# Settings for TinyMCE HTMLField
+TINYMCE_JS_URL = '//cdn.tinymce.com/4/tinymce.min.js'
