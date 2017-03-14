@@ -14,7 +14,7 @@
 {% if latest_blog_list %}
 <div id="blog-list">
     {% for blog in latest_blog_list %}
-    <div class="blog expanded">
+    <div class="blog">
         <iframe class="blog-video" src="{{ blog.youtube_video }}" frameborder="0" allowfullscreen></iframe>
         <p class="title">{{ blog.title }}</p>
         <p class="pub_date">{{ blog.pub_date }}</p>
