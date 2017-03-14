@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<div id="blog-header"
+ style="background-image: url({% static 'home/eggshell.jpg' %})">
+<h1>Blog Entries:</h1>
+</div>
+
+{% if latest_blog_list %}
+<div id="blog-list">
+    {% for blog in latest_blog_list %}
+    <div class="blog expanded">
+        <iframe class="blog-video" src="{{ blog.youtube_video }}" frameborder="0" allowfullscreen></iframe>
+        <p class="title">{{ blog.title }}</p>
+        <p class="pub_date">{{ blog.pub_date }}</p>
+        <div class="body-preview">
+            {{ blog.body|safe }}
+        </div>
+        <!--<a class="blog-detail-link" href="{% url 'blog:detail' blog.pk blog.slug %}">Read More >>></a>-->
+        <span class="button">Read More</span>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div id="coming-soon">
+    <h1 style="background-image: url({% static 'home/eggshell.jpg' %})">Coming Soon!</h1>
+</div>
+{% endif %}
+
+{% if is_paginated %}
+<div class="pagination">
+    <span class="page-links">
+        {% if page_obj.has_previous %}
+        <a href="/blog/?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+        <span class="page-current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+        {% if page_obj.has_next %}
+        <a href="/blog/?page={{ page_obj.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+{% endif %}
+
+
+<!--
+{% if tags %}
+<ul class="tag-list">
+    {% for tag in tags %}<li class=".tag">{{ tag.title }}</li>{% endfor %}
+</ul>
+{% endif %}
+-->
+{% endblock %}

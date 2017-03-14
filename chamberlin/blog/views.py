@@ -4,6 +4,7 @@ from django.utils import timezone
 
 # Relative imports
 from .models import Entry, Tag
+from home.models import Contact
 
 
 # Create your views here.
@@ -15,11 +16,10 @@ class IndexView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         """
-        Get list of tags
-        :return: tags
+        Get most recent contact object for social media links
         """
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['tags'] = Tag.objects.distinct()
+        context['contact'] = Contact.objects.latest('pub_date')
         return context
 
     def get_queryset(self):
@@ -40,25 +40,7 @@ class DetailView(generic.DetailView):
     template_name = 'blog/detail.html'
 
 
-class TagListView(generic.ListView):
-    """
-    View all entries assiciated with a certain tag
-    """
-    model = Tag
-    template_name = 'blog/tag_list.html'
-    context_object_name = 'tag_list'
-    paginate_by = 5
-    paginate_orphans = 2
-
-    def get_queryset(self):
-        return Tag.objects.distinct()
-
-
 class TagDetailView(generic.DetailView):
     model = Tag
     template_name = 'blog/tag_detail.html'
     context_object_name = 'tag'
-
-
-class TestView(generic.TemplateView):
-    template_name = 'blog/new-entry.html'
