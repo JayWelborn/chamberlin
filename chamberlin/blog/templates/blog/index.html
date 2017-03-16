@@ -2,12 +2,27 @@
 {% load static %}
 
 {% block header %}
-    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
+<!-- Facebook og properties -->
+<meta property="og:url" content="https://www.chamberlinsax.com/blog" />
+<meta property="og:title" content="Mike's Blog" />
+<meta property="og:description" content="Watch and Read about what I've been working on"/>
+<meta property="og:image" content="{% static 'images/about.jpg' %}"/>
+<!-- End og properties -->
+<!-- Twitter cards -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ChamberlinSax" />
+<meta name="twitter:creator" content="@__JayWelborn__"/>
+<meta name="twitter:title" content="Mike's Blog" />
+<meta name="twitter:description" content="Watch and Read about what I've been working on" />
+<meta name="twitter:image" content="{% static 'images/about.jpg' %}" />
+<meta name="twitter:image:alt" content="Mike's Blog"/>
+<!--End Twitter Cards-->
 {% endblock %}
 
 {% block content %}
 <div id="blog-header"
- style="background-image: url({% static 'home/eggshell.jpg' %})">
+ style="background-image:  url({% static 'home/eggshell.jpg' %})">
 <h1>Blog Entries:</h1>
 </div>
 

@@ -2,6 +2,21 @@
 {% load static %}
 {% block header %}
 <link rel="stylesheet" type="text/css" href="{% static 'listen/list_view.css' %}">
+<!-- Facebook og properties -->
+<meta property="og:url" content="https://www.chamberlinsax.com/listen" />
+<meta property="og:title" content="{{ audio.header }}" />
+<meta property="og:description" content="Check out my music"/>
+<meta property="og:image" content="{% static 'images/about.jpg' %}"/>
+<!-- End og properties -->
+<!-- Twitter cards -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ChamberlinSax" />
+<meta name="twitter:creator" content="@__JayWelborn__"/>
+<meta name="twitter:title" content="{{ audio.header }}" />
+<meta name="twitter:description" content="Check out my music" />
+<meta name="twitter:image" content="{% static 'images/about.jpg' %}" />
+<meta name="twitter:image:alt" content="{{ audio.header }}"/>
+<!--End Twitter Cards-->
 {% endblock %}
 {% block title %}Listen{% endblock %}
 {% block content %}

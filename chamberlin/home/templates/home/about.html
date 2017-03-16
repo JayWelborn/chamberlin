@@ -2,6 +2,21 @@
 {% load static %}
 {% block header %}
 <link rel="stylesheet" type="text/css" href="{% static 'home/css/about.css' %}">
+<!-- Facebook og properties -->
+<meta property="og:url" content="https://www.chamberlinsax.com/about" />
+<meta property="og:title" content="{{ about.image_tag }}" />
+<meta property="og:description" content="{{ about.bio }}"/>
+<meta property="og:image" content="{% static 'images/about.jpg' %}"/>
+<!-- End og properties -->
+<!-- Twitter cards -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ChamberlinSax" />
+<meta name="twitter:creator" content="@__JayWelborn__"/>
+<meta name="twitter:title" content="{{ about.image_tag }}" />
+<meta name="twitter:description" content="{{ about.bio }}" />
+<meta name="twitter:image" content="{% static 'images/about.jpg' %}" />
+<meta name="twitter:image:alt" content="{{ about.image_tag }}"/>
+<!--End Twitter Cards-->
 {% endblock %}
 {% block title %}Mike Chamberlin: About{% endblock %}
 {% block content %}
