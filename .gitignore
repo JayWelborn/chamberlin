@@ -23,6 +23,7 @@ migrations
 venv/
 ENV/
 mike_env/
+chamberlinenv/
 
 # local settings
 settings.py
