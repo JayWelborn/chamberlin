@@ -12,7 +12,7 @@ $(document).ready(function(){
     });
 
     $('.blog .button').click(function(){
-        $( '.blog' ).toggleClass( "expanded" );
+        $( this ).parent().toggleClass( "expanded" );
         $( this ).text(function(i, text){
             return text === "Read More" ? "Read Less" : "Read More";
         })

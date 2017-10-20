@@ -30,8 +30,11 @@
 <div id="blog-list">
     {% for blog in latest_blog_list %}
     <div class="blog">
-        <iframe class="blog-video" src="{{ blog.youtube_video }}" frameborder="0" allowfullscreen></iframe>
+        {% if blog.youtube_video %}
+            <iframe class="blog-video" src="{{ blog.youtube_video }}" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
         <p class="title">{{ blog.title }}</p>
+        <br>
         <p class="pub_date">{{ blog.pub_date }}</p>
         <div class="body-preview">
             {{ blog.body|safe }}
