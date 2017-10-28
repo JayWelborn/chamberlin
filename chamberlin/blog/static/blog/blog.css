@@ -61,7 +61,6 @@ body {
 }
 
 .blog {
-    padding: 30px;
     background: #eae3dd;
     margin: 10px;
     flex-grow: 0;
@@ -124,6 +123,7 @@ body {
 }
 
 .blog .body-preview {
+    padding: 30px;
     max-height: 12em;
     overflow: hidden;
     position: relative;
