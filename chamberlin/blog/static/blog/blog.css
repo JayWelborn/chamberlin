@@ -61,6 +61,7 @@ body {
 }
 
 .blog {
+    padding: 30px;
     background: #eae3dd;
     margin: 10px;
     flex-grow: 0;
@@ -81,7 +82,6 @@ body {
 }
 
 .blog.expanded {
-    padding: 30px;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
