@@ -1,6 +1,7 @@
 # Django Imports
 from django import forms
 from django.core.mail import EmailMessage
+from snowpenguin.django.recaptcha3.fields import ReCaptchaField
 
 
 # create a contact form to send email to my email address
@@ -14,21 +15,24 @@ class ContactForm(forms.Form):
     subject = forms.CharField(max_length=100, required=True)
     message = forms.CharField(widget=forms.Textarea, required=True)
     cc_myself = forms.BooleanField(required=False)
+    captcha = ReCaptchaField()
 
     def send_email(self):
         """
-        This function will send an email using the data from the form on my contact page
+        This function will send an email using the data from the form on my
+        contact page
         :return: none
         """
 
         # instantiates EmailMessage class with data from form
-        contact_email = EmailMessage(subject=self.cleaned_data['subject'],
-                                     to=['mike.chamberlin@gmail.com'],
-                                     body='Sender Name: {} \nSender Email: {}\n\n {}'.format(
-                                         self.cleaned_data['name'],
-                                         self.cleaned_data['email'],
-                                         self.cleaned_data['message']
-                                     ))
+        contact_email = EmailMessage(
+            subject=self.cleaned_data['subject'],
+            to=['mike.chamberlin@gmail.com'],
+            body='Sender Name: {} \nSender Email: {}\n\n {}'.format(
+                self.cleaned_data['name'],
+                self.cleaned_data['email'],
+                self.classeaned_data['message']
+            ))
 
         # adds cc line if applicable
         cc_myself = self.cleaned_data['cc_myself']
